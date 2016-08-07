@@ -9,12 +9,9 @@ Central::Central(unsigned int nuevoId){
     this->listaInternos = new Lista<Interno*>;
     this->enlacesACentrales = new Lista<EnlaceACentral*>;
     this->anuladas = 0;
-    // Etiqueta recorrido
-    this->peso = 0;
-    this->vieneDe = NULL;
-    this->nivel = 0;
-    this->estado = 0;
-    // M·ximos
+
+
+    // M√°ximos
     this->maxMinutosEmitidos = NULL;
     this->maxLlamadasEmitidas = NULL;
     this->maxOcupadoEmitidas = NULL;
@@ -29,7 +26,7 @@ Central::Central(unsigned int nuevoId){
 
 /*
 
-    LiberaciÛn de memoria:
+    Liberaci√≥n de memoria:
 
     Se borran los interno y los enlacesACentrales y las listas de punteros a estos.
 
@@ -54,7 +51,7 @@ Central::~Central(){
     delete listaInternos;
 }
 
-// MÈtodos
+// M√©todos
 
 Interno* Central::buscarInterno(unsigned int idSolicitado){
     Interno* internoSolicitado = NULL;
@@ -129,39 +126,9 @@ unsigned int Central::buscarEnlaceAOtraCentral (unsigned int idSolicitado){
 }
 
 
-unsigned int Central::obtenerPeso(){
-    return this->peso;
-}
 
-Central* Central::obtenerVieneDe(){
-    return this->vieneDe;
-}
 
-unsigned int Central::obtenerNivel(){
-    return this->nivel;
-}
-
-unsigned int Central::obtenerEstado(){
-    return this->estado;
-}
-
-void Central::cambiarPeso(unsigned int nuevoPeso){
-    this->peso = nuevoPeso;
-}
-
-void Central::cambiarVieneDe(Central* nuevoVieneDe){
-    this->vieneDe = nuevoVieneDe;
-}
-
-void Central::cambiarNivel(unsigned int nuevoNivel){
-    this->nivel = nuevoNivel;
-}
-
-void Central::cambiarEstado(unsigned int nuevoEstado){
-    this->estado = nuevoEstado;
-}
-
-// MÈtodos m·ximos
+// M√©todos m√°ximos
 
 void Central::calcularMaximosCentral(){
 

@@ -14,7 +14,7 @@ private:
     unsigned int id;
     Lista<Interno*>* listaInternos;
     /*
-        Lista de centrales con las que est· conectada
+        Lista de centrales con las que est√° conectada
         mediante enlace directo (las separa 1 solo enlace de por medio)
     */
     Lista<EnlaceACentral*>* enlacesACentrales;
@@ -23,7 +23,7 @@ private:
     */
     unsigned int anuladas;
 
-    /* M·ximos */
+    /* M√°ximos */
 
     Interno* maxMinutosEmitidos;
     Interno* maxLlamadasEmitidas;
@@ -33,30 +33,16 @@ private:
     Interno* maxMinutoRecibidos;
     Interno* maxOcupadoRecibidos;
 
-    /* Etiqueta */
-    int peso;
-    Central* vieneDe;
-    int nivel;
-    int estado;
+
 
 public:
 
-    unsigned int obtenerPeso();
-    Central* obtenerVieneDe();
-    unsigned int obtenerNivel();
-    unsigned int obtenerEstado();
-
-    void cambiarPeso(unsigned int nuevoPeso);
-    void cambiarVieneDe(Central* nuevoVieneDe);
-    void cambiarNivel(unsigned int nuevoNivel);
-    void cambiarEstado(unsigned int nuevoEstado);
-
     /*  Constructor
 
-        Pre: recibe un id v·lido.
+        Pre: recibe un id v√°lido.
 
-        Post: crea una central con el id solicitado, su lista de internos vacÌa,
-        y una lista con centrales con las cuales est· enlazada.
+        Post: crea una central con el id solicitado, su lista de internos vac√≠a,
+        y una lista con centrales con las cuales est√° enlazada.
 
     */
     Central(unsigned int nuevoId);
@@ -99,7 +85,7 @@ public:
 
     /*  Buscar enlaces a otras centrales.
 
-        Pre: recibe un id v·lido.
+        Pre: recibe un id v√°lido.
 
         Post: devuelve un puntero a la central solicitada, null si no existiere.
 
